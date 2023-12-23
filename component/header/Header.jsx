@@ -1,6 +1,7 @@
 import "./style.css"
 import Link from "next/link";
-import { FaFacebookF, FaTwitter, FaLinkedin, FaSearch } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaLinkedin } from "react-icons/fa";
+import Search from "../client_component/search_button/Search";
 
 function Header() {
     return (
@@ -44,19 +45,7 @@ function Header() {
                             <li><Link href="#">Blog</Link></li>
                             <li><Link href="#">Contact</Link></li>
                         </ul>
-                        <div className="search">
-                            <Link href="#"><FaSearch /></Link>
-
-                            <div className="search-area">
-                                <form action="">
-                                    <input type="text" name="searchItem" placeholder="Search Here..." />
-                                    <button type="submit">
-                                        <FaSearch />
-                                    </button>
-                                </form>
-                            </div>
-                            <div className="overflow"></div>
-                        </div>
+                        <Search />
                         <div className="mobil-icon d-md-none">
                             <i className="fa-solid fa-bars"></i>
                         </div>
