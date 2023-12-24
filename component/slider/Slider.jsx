@@ -14,7 +14,9 @@ function BannerSlider() {
       let res = await fetch("http://127.0.0.1:8000/api/sliders");
       let data = await res.json();
       setSlider(data);
-    } catch {}
+    } catch (err) {
+      console.log(err);
+    }
 
     // .then(function (data) {
     //     return data.json();
